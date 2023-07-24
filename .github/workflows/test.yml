@@ -26,6 +26,6 @@ jobs:
         - name: Inatall Depesndencies
           run: npm ci
         - name: build project
-          run: nmp run build
+          run: npm run build
         - name: deploy
           run: echo "Deploying..."
