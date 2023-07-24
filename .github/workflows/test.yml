@@ -4,13 +4,30 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
-      - name: Get code from repo
+      - name: Get code
         uses: actions/checkout@v3
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Inatalling Dependencies
+      - name: Inatall Depesndencies
         run: npm ci
       - name: Run Tests
         run: npm test
+  deploy:
+    runs-on: windows-latest
+    steps:
+      runs-on: windows-latest
+      steps:
+        - name: Get code
+          uses: actions/checkout@v3
+        - name: Install NodeJS
+          uses: actions/setup-node@v3
+          with:
+            node-version: '18'
+        - name: Inatall Depesndencies
+          run: npm ci
+        - name: build project
+          run: nmp run build
+        - name: deploy
+          run echo "Deploying..."
