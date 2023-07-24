@@ -30,4 +30,4 @@ jobs:
         - name: build project
           run: nmp run build
         - name: deploy
-          run echo "Deploying..."
+          run: echo "Deploying..."
