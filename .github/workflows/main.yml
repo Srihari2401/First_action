@@ -1,0 +1,10 @@
+name: New Actions
+
+on: workflow_dispatch
+
+jobs:
+  Test_run:
+    runs-on:  windows-latest
+    steps:
+      - name: Print Hello
+        run: echo "Hello"
